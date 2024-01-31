@@ -1,0 +1,11 @@
+export const textEn = [
+  "All Plastic World is a pioneering company dedicated to revolutionizing the way we perceive and manage plastic waste. Committed to environmental sustainability, we specialize in advanced recycling technologies that breathe new life into discarded plastics. Our mission is to reduce the ecological footprint by transforming plastic waste into valuable, high-quality materials.",
+  "At All Plastic World, innovation is at the core of our operations. We strive to redefine the possibilities of plastic recycling, constantly pushing boundaries to create a more circular and responsible approach to resource management. Through cutting-edge processes and a relentless commitment to eco-conscious practices, we aim to be a catalyst for positive change in the global fight against plastic pollution.",
+  "Our team is comprised of passionate individuals who share a vision for a cleaner, greener planet. Together, we work towards a future where plastic is not a problem but a valuable resource. Join us on this transformative journey as we shape a world where sustainability and innovation coexist harmoniously – a world where All Plastic has a purpose.",
+];
+
+export const textUa = [
+  "All Plastic World — це піонерська компанія, яка прагне революціонізувати спосіб сприйняття та поводження з пластиковими відходами. Віддані екологічній стійкості, ми спеціалізуємося на передових технологіях переробки, які вдихають нове життя у викинутий пластик. Наша місія — зменшити екологічний слід шляхом перетворення пластикових відходів на цінні високоякісні матеріали.",
+  "У All Plastic World інновації є основою нашої діяльності. Ми прагнемо переглянути можливості переробки пластику, постійно розсуваючи межі, щоб створити більш циклічний і відповідальний підхід до управління ресурсами. Завдяки передовим процесам і невпинній відданості екологічно свідомим практикам ми прагнемо стати каталізатором позитивних змін у глобальній боротьбі із забрудненням пластиком.",
+  "Наша команда складається з пристрасних людей, які поділяють бачення чистішої та зеленішої планети. Разом ми працюємо над майбутнім, де пластик буде не проблемою, а цінним ресурсом. Приєднуйтесь до нас у цій трансформаційній подорожі, коли ми формуємо світ, де гармонійно співіснують екологічність та інновації – світ, де весь пластик має мету.",
+];

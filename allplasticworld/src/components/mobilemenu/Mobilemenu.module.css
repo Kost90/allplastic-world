@@ -1,0 +1,7 @@
+.menu {
+  z-index: 11;
+}
+
+.div_menu {
+  @apply absolute flex md:hidden flex-col items-center justify-center gap-10 w-full bg-pink text-dark left-0 p-5 h-screen font-bold top-20;
+}/*# sourceMappingURL=Mobilemenu.module.css.map */

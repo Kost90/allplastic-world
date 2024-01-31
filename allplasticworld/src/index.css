@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Inter", sans-serif;
+  src: url(./assets/fonts/Inter-VariableFont_slnt\wght.ttf);
+}
+
+html {
+  font-family: Inter;
+}
+
+body {
+  @apply bg-body;
+}
+
+body h1 {
+  @apply text-white text-h1Mob lg:text-h1Desk font-bold;
+}
+
+body h2 {
+  @apply text-white text-h2Mob lg:text-h2Desk font-semibold;
+}
+
+body h3 {
+  @apply text-slate-100 text-h3Mob lg:text-h3Desk;
+}
+
+body p {
+  @apply text-slate-100 text-pMob lg:text-pDesk;
+}
+
+body a {
+  @apply text-slate-100 text-link;
+}

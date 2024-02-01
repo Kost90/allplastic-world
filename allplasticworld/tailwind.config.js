@@ -20,9 +20,17 @@ export default {
       blur: {
         blurBg: "100px",
       },
+      width:{
+        "1250":"1250px",
+        "1550":"1550px"
+      },
+      height:{
+        "720":"720px",
+        "920":"920px",
+      },
       backgroundImage: {
-        blur1:
-          "linear-gradient(138deg, #0194FE 30.62%, rgba(1, 148, 254, 0.00) 62.8%)",
+        blur:
+          "linear-gradient(138deg, rgb(1, 148, 254) 12.62%, rgba(1, 148, 254, 0) 49.8%)",
         btnBg: "linear-gradient(66deg, #00C3FD 25.98%, #0194FE 65.48%)",
       },
       fontSize: {

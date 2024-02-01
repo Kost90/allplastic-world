@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  @apply bg-body;
+  @apply bg-body overflow-x-hidden;
 }
 
 body h1 {
@@ -33,4 +33,8 @@ body p {
 
 body a {
   @apply text-slate-100 text-link;
+}
+
+#root{
+  @apply overflow-x-hidden;
 }

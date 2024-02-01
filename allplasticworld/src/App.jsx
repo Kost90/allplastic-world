@@ -10,21 +10,17 @@ function App() {
       <section className="relative pb-10 md:pb-20">
         <Header />
         <Blurblock
-          top={"-200px"}
-          left={"-200px"}
+          top={"-20%"}
+          left={"-20%"}
           rotate={"6.584deg"}
-          width={"650px"}
-          height={"752px"}
         />
       </section>
       <section className="relative pb-10 md:pb-20">
         <Mainsection />
         <Blurblock
-          top={"-300px"}
-          right={"-300px"}
+          top={"-30%"}
+          right={"-30%"}
           rotate={"174deg"}
-          width={"1100px"}
-          height={"770px"}
         />
       </section>
       <section className="relative pb-10 md:pb-20">

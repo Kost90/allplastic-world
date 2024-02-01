@@ -46,6 +46,7 @@ export default {
       },
       borderColor:{
         btnBorderCol:"#3DBDF1",
+        cardBorderCol:"rgba(0, 77, 244, 0)",
       },
     },
   },

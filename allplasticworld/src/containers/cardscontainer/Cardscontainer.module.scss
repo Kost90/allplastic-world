@@ -1,0 +1,3 @@
+.cards_wrapper{
+    @apply flex flex-col md:flex-row flex-wrap items-center justify-center p-4 md:p-8 bg-cardBg gap-4 rounded-lg;
+}

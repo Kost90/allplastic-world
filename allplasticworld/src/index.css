@@ -28,7 +28,7 @@ body h3 {
 }
 
 body p {
-  @apply text-slate-100 text-pMob lg:text-pDesk;
+  @apply text-slate-300 text-pMob lg:text-pDesk;
 }
 
 body a {

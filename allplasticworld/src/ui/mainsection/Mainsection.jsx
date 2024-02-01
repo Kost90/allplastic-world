@@ -5,7 +5,7 @@ function Mainsection() {
   const lang = useSelector((state) => state.languages);
   return (
     <div className="container">
-      <h1 className="md:max-w-screen-md max-w-80">
+      <h1 className="md:max-w-screen-md max-w-80 leading-12">
         {lang === "en"
           ? `Welcome to All plastic world`
           : `Ласкаво просимо до всього пластикового світу`}

@@ -1,3 +1,3 @@
 .about_wrapper {
-  @apply flex flex-col-reverse md:flex-row justify-around items-center;
+  @apply flex flex-col-reverse md:flex-row justify-around items-center gap-8 md:gap-16;
 }/*# sourceMappingURL=About.module.css.map */

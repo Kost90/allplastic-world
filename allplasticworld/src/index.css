@@ -36,5 +36,5 @@ body a {
 }
 
 #root{
-  @apply overflow-x-hidden;
+  @apply overflow-hidden;
 }

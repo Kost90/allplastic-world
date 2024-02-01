@@ -35,7 +35,7 @@ export default {
       },
       fontSize: {
         h1Desk: "48px",
-        h1Mob: "36px",
+        h1Mob: "32px",
         h2Desk: "30px",
         h2Mob: "18px",
         h3Mob: "13px",
@@ -43,6 +43,7 @@ export default {
         pDesk: "18px",
         pMob: "13px",
         link:"16px",
+        progresstext:"8px",
       },
       borderColor:{
         btnBorderCol:"#3DBDF1",

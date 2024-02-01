@@ -1,0 +1,13 @@
+.progress_bar_container {
+  @apply w-full bg-transparent h-10 md:h-14 rounded-2xl border border-brightBlue;
+}
+
+.progrees_filer {
+  @apply flex items-center justify-end h-full bg-emerald-500 text-center;
+  transition: "width 1s ease-in-out";
+  border-radius: inherit;
+}
+
+.count {
+  @apply text-white font-semibold p-2 text-progresstext md:text-sm;
+}/*# sourceMappingURL=Progressbar.module.css.map */

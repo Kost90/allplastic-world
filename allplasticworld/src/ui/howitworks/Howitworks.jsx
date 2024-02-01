@@ -9,7 +9,7 @@ function Howitworks() {
 
   return (
     <div className="container">
-      <h1 className="text-center pb-4 md:pb-8">How our company works</h1>
+      <h1 className="text-center pb-4 md:pb-8">{lang === 'en'?'How our company works':'Як наша компанія працює'}</h1>
       <Cardscontainer>
         {lang === "en"
           ? cardsContentEn.map((el) => (

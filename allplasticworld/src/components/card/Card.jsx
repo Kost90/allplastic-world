@@ -8,7 +8,6 @@ function Card({ text, titel, id }) {
   return (
     <div
       className={styles.card_container}
-      key={id}
       style={id ? { background: "none" } : null}
     >
       <h3 className="uppercase font-semibold text-center">{titel}</h3>

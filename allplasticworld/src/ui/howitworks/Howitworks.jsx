@@ -13,10 +13,10 @@ function Howitworks() {
       <Cardscontainer>
         {lang === "en"
           ? cardsContentEn.map((el) => (
-              <Card titel={el.titel} text={el.text} id={el.id} />
+              <Card titel={el.titel} text={el.text} id={el.id} key={el.id}/>
             ))
           : textContentUA.map((el) => (
-              <Card titel={el.titel} text={el.text} id={el.id} />
+              <Card titel={el.titel} text={el.text} id={el.id} key={el.id}/>
             ))}
       </Cardscontainer>
     </div>

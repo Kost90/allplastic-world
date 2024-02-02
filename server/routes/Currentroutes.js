@@ -3,6 +3,6 @@ const router = express.Router();
 const currentController = require('../controller/CurrentController');
 
 router.get('/current', currentController.getCurrent);
-// router.put("/", userController.addNewUser);
+router.put("/current/:id", currentController.updateCurrent);
 
 module.exports = router;

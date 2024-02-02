@@ -3,8 +3,7 @@
 }
 
 .progrees_filer {
-  @apply flex items-center justify-end h-full bg-emerald-500 text-center;
-  transition: "width 1s ease-in-out";
+  @apply flex items-center justify-start h-full bg-emerald-500 text-center;
   border-radius: inherit;
 }
 

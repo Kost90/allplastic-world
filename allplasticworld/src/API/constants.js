@@ -1,0 +1,1 @@
+export const mockAPIurl = 'https://65bcd1a0b51f9b29e9325818.mockapi.io/data';

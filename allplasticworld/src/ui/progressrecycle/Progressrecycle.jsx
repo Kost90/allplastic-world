@@ -8,8 +8,6 @@ function Progressrecycle() {
   const [current, setCurrent] = useState([]);
   const [mounth, setMounth] = useState([]);
 
-  console.log('render parent from progress bar')
-
   // необходимо сделать красивый лоадер компонентом и добавить сюда. в виде suspense
 
   useEffect(() => {

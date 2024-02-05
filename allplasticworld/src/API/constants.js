@@ -1,1 +1,1 @@
-export const mockAPIurl = import.meta.env.VITE_MOCKAPI_URL;
+export const mockAPIurl = import.meta.env.VITE_SERVER_URL;

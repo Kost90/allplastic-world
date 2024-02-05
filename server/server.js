@@ -14,7 +14,7 @@ testConnection();
 app.use(cors());
 app.use(express.json());
 
-createTables();
+// createTables();
 
 app.use("/month", mounthRoutes);
 app.use("/current", currentRoutes);

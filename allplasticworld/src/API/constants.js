@@ -1,1 +1,1 @@
-export const mockAPIurl = 'https://65bcd1a0b51f9b29e9325818.mockapi.io/data';
+export const mockAPIurl = import.meta.env.VITE_MOCKAPI_URL;

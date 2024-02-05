@@ -10,7 +10,7 @@ const Current = sequelize.define(
       autoIncrement: true,
     },
     tone: {
-      type: DataTypes.NUMBER(25),
+      type: DataTypes.STRING(25),
       allowNull: false,
     },
   },

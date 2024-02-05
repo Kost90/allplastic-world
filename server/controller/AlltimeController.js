@@ -1,9 +1,9 @@
 const Alltime = require("../models/Alltime");
 
 const getAlltimes = async (req, res) => {
-  const id = req.params.id;
+  // const id = req.params.id;
   try {
-    const result = await Alltime.findOne({ where: { id: id } });
+    const result = await Alltime.findAll();
     if (result !== null) {
       return res.json(result);
     }

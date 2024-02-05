@@ -2,9 +2,9 @@ const { where } = require("sequelize");
 const Month = require("../models/Month");
 
 const getMonth = async (req, res) => {
-  const id = req.params.id;
+  // const id = req.params.id;
   try {
-    const result = await Month.findOne({ where: { id: id } });
+    const result = await Month.findAll();
     if (result !== null) {
       return res.json(result);
     }

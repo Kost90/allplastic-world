@@ -1,9 +1,9 @@
 const Current = require("../models/Current");
 
 const getCurrent = async (req, res) => {
-  const id = req.params.id;
+  // const id = req.params.id;
   try {
-    const result = await Current.findOne({ where: { id: id } });
+    const result = await Current.findAll();
     if (result != null) {
       return res.json(result);
     }

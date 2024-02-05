@@ -15,7 +15,7 @@ class MockAPI extends API {
   }
 
   async getMonth({ signal }) {
-    return await this.fetch({ path: "mounth", signal });
+    return await this.fetch({ path: "month", signal });
   }
 
   async updateCurrent({ signal, id }) {
@@ -23,7 +23,7 @@ class MockAPI extends API {
   }
 
   async updateMonth({ signal, id }) {
-    return await this.fetch({ path: `mounth/${id}`, signal });
+    return await this.fetch({ path: `month/${id}`, signal });
   }
 }
 

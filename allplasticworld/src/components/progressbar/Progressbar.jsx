@@ -27,7 +27,7 @@ const Progressbar = memo(({ data }) => {
     <div className={styles.progress_bar_container}>
       <motion.div
         initial={{ width: 0 }}
-        whileInView={{ width: progress < 10 ? `1.5%` : `${progress}` }}
+        whileInView={{ width: progress < 10 ? `3%` : `${progress}` }}
         transition={{ duration: 0.7 }}
         className={styles.progrees_filer}
       >

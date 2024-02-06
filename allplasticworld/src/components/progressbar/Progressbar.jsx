@@ -21,14 +21,14 @@ const Progressbar = memo(({ data }) => {
     }, 40);
 
     return () => clearInterval(interval);
-  }, [prop, progress,lang]);
+  }, [prop, progress, lang]);
 
   return (
     <div className={styles.progress_bar_container}>
       <motion.div
         initial={{ width: 0 }}
-        whileInView={{ width: `${progress}%` }}
-        transition={{ duration: 0.5 }}
+        whileInView={{ width: progress < 10 ? `1.5%` : `${progress}` }}
+        transition={{ duration: 0.7 }}
         className={styles.progrees_filer}
       >
         <span className={styles.count}>

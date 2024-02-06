@@ -1,7 +1,6 @@
 const Current = require("../models/Current");
 
 const getCurrent = async (req, res) => {
-  // const id = req.params.id;
   try {
     const result = await Current.findAll();
     if (result != null) {
@@ -14,7 +13,8 @@ const getCurrent = async (req, res) => {
 
 const updateCurrent = async (req, res) => {
   let newCurrent = req.body;
-  const { tone, id } = newCurrent;
+  let id = req.params.id;
+  const { tone } = newCurrent;
   let result = await Current.update({ tone: tone }, { where: { id: id } });
   return res.json(result);
 };

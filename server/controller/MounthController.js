@@ -13,9 +13,9 @@ const getMonth = async (req, res) => {
 };
 
 const updateMonth = async (req, res) => {
-  let newCurrent = req.body;
+  let newMounth = req.body;
   let id = req.params.id;
-  const { tone } = newCurrent;
+  const { tone } = newMounth;
   try {
     const result = await Month.update({ tone: tone }, { where: { id: id } });
     return res.json(result);

@@ -11,6 +11,7 @@ function Progressrecycle() {
   const lang = useSelector((state) => state.languages);
   const [current, setCurrent] = useState([]);
   const [mounth, setMounth] = useState([]);
+  const [alltime, setAlltime] = useState([]);
   // const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -21,8 +22,10 @@ function Progressrecycle() {
       const signal = controller.signal;
       const resCurrent = await Mockapi.getCurrent({ signal });
       const resMounth = await Mockapi.getMonth({ signal });
+      const resAlltime = await Mockapi.getAlltime({signal})
       setCurrent((prev) => (prev = resCurrent[0]));
       setMounth((prev) => (prev = resMounth[0]));
+      setAlltime((prev) => (prev = resAlltime[0]));
       // setLoading(false);
     };
     fetchData();
@@ -50,6 +53,12 @@ function Progressrecycle() {
             : "Прогрес за останній місяць:"}
         </h3>
         <ProgressBar data={mounth} />
+        <h3 className="uppercase p-2 md:p-4">
+          {lang === "en"
+            ? "All time progress:"
+            : "Прогрес за весь період:"}
+        </h3>
+        <ProgressBar data={alltime} />
       </Suspense>
     </div>
   );

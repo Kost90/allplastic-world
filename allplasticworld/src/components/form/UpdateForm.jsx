@@ -35,22 +35,18 @@ function UpdateForm() {
     };
     const toneCurrent = Number(data.tone) + Number(current.tone);
     data.tone = `${toneCurrent}`;
-    const controller = new AbortController();
-    const signal = controller.signal;
     Mockapi.updateCurrent({
-      signal: signal,
       id: data.id,
-      body: data,
+      body: JSON.stringify(data),
     });
     const toneMounth = Number(data.tone) + Number(mounth.tone);
     const monthdata = {
-      id:1,
+      id: 1,
       tone: `${toneMounth}`,
     };
-    Mockapi.updateMonth({
-      signal: signal,
+    Mockapi.updateAlltime({
       id: monthdata.id,
-      body: monthdata,
+      body: JSON.stringify(monthdata),
     });
     e.target.reset();
   };
@@ -61,9 +57,7 @@ function UpdateForm() {
         onSubmit={handelSubmit}
         className="flex flex-col w-80 items-center justify-center gap-2 m-auto"
       >
-        <label htmlFor="input" className="text-white">
-          Добавить тоннаж:
-        </label>
+        <label className="text-white">Добавить тоннаж:</label>
         <input type="text" name="tone" />
         <button
           type="submit"

@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const { testConnection } = require("./models/Conn");
-const { createTables } = require("./models/setUp");
+// const { createTables } = require("./models/setUp");
 const currentRoutes = require("./routes/Currentroutes");
 const mounthRoutes = require("./routes/Mounthroutes");
 const alltimeRoutes = require("./routes/Alltimeroutes");

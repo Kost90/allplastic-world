@@ -1,20 +1,21 @@
-import React, { useEffect, useState } from "react";
-import Progressbar from "../../components/progressbar/Progressbar";
+import React, { useEffect, useState, lazy, Suspense } from "react";
 import { useSelector } from "react-redux";
 import Mockapi from "../../API/Mockapi";
 import Loader from "../../components/loader/Loader";
+
+const ProgressBar = lazy(() =>
+  import("../../components/progressbar/Progressbar")
+);
 
 function Progressrecycle() {
   const lang = useSelector((state) => state.languages);
   const [current, setCurrent] = useState([]);
   const [mounth, setMounth] = useState([]);
-  const [loading, setLoading] = useState(false);
-
-  // необходимо сделать красивый лоадер компонентом и добавить сюда. в виде suspense
+  // const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     let controller;
-    setLoading(true);
+    // setLoading(true);
     const fetchData = async () => {
       const controller = new AbortController();
       const signal = controller.signal;
@@ -22,7 +23,7 @@ function Progressrecycle() {
       const resMounth = await Mockapi.getMonth({ signal });
       setCurrent((prev) => (prev = resCurrent[0]));
       setMounth((prev) => (prev = resMounth[0]));
-      setLoading(false);
+      // setLoading(false);
     };
     fetchData();
 
@@ -38,28 +39,18 @@ function Progressrecycle() {
       <h1 className="text-center pb-4 md:pb-8 uppercase">
         {lang === "en" ? "Live recycle progress" : "Живий прогрес переробки"}
       </h1>
-      {loading === true ? (
-        <Loader />
-      ) : (
-        <>
-          <div className="w-80 md:w-1/2 m-auto text-start">
-            <h3 className="uppercase p-2 md:p-4">
-              {lang === "en" ? "Current progress:" : "Поточний прогрес:"}
-            </h3>
-            <Progressbar data={current} />
-            <h3 className="uppercase p-2 md:p-4">
-              {lang === "en"
-                ? "Last month progress:"
-                : "Прогрес за останній місяць:"}
-            </h3>
-            <Progressbar data={mounth} />
-            {/* <h3 className="uppercase p-2 md:p-4">
-         {lang === "en" ? "All recycle progress:" : "Весь прогрес переробки:"}
-       </h3>
-       <Progressbar data={70} /> */}
-          </div>
-        </>
-      )}
+      <Suspense fallback={<Loader />}>
+        <h3 className="uppercase p-2 md:p-4">
+          {lang === "en" ? "Current progress:" : "Поточний прогрес:"}
+        </h3>
+        <ProgressBar data={current} />
+        <h3 className="uppercase p-2 md:p-4">
+          {lang === "en"
+            ? "Last month progress:"
+            : "Прогрес за останній місяць:"}
+        </h3>
+        <ProgressBar data={mounth} />
+      </Suspense>
     </div>
   );
 }

@@ -6,11 +6,14 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <RootLayout />,
+    children:[
+      {
+        path: "update",
+        element: <UpdateForm />,
+      },
+    ]
   },
-  {
-    path: "update",
-    element: <UpdateForm />,
-  },
+  
 ]);
 
 const Router = () => <RouterProvider router={router} />;

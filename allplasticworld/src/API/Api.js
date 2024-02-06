@@ -8,7 +8,7 @@ class API {
         method,
         signal,
         headers: {
-          ContentType: 'application/json',
+          'Content-Type': 'application/json',
           ...headers,
         },
         body,

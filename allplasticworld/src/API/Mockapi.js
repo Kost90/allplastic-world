@@ -18,12 +18,41 @@ class MockAPI extends API {
     return await this.fetch({ path: "month", signal });
   }
 
-  async updateCurrent({ signal, id, body }) {
-    return await this.fetch({ path: `current/${id}`, signal, method:'PUT', body:JSON.stringify(body) });
+  async getAlltime({ signal }) {
+    return await this.fetch({ path: "alltime", signal });
   }
 
-  async updateMonth({ signal, id, body }) {
-    return await this.fetch({ path: `month/${id}`, signal, method:'PUT', body:JSON.stringify(body) });
+  async updateCurrent({ id, body }) {
+    const controller = new AbortController();
+    const signal = controller.signal;
+    return await this.fetch({
+      path: `current/${id}`,
+      method: "PUT",
+      body: body,
+      signal: signal,
+    });
+  }
+
+  async updateMonth({ id, body }) {
+    const controller = new AbortController();
+    const signal = controller.signal;
+    return await this.fetch({
+      path: `month/${id}`,
+      method: "PUT",
+      body: body,
+      signal,
+    });
+  }
+
+  async updateAlltime({ id, body }) {
+    const controller = new AbortController();
+    const signal = controller.signal;
+    return await this.fetch({
+      path: `alltime/${id}`,
+      method: "PUT",
+      body: body,
+      signal,
+    });
   }
 }
 

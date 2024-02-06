@@ -5,7 +5,7 @@ import Mainsection from "../ui/mainsection/Mainsection";
 import About from "../ui/about/About";
 import Howitworks from "../ui/howitworks/Howitworks";
 import Progressrecycle from "../ui/progressrecycle/Progressrecycle";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import UpdateForm from "../components/form/UpdateForm";
 
 function RootLayout() {
@@ -18,6 +18,7 @@ function RootLayout() {
       ) : (
         <>
           <section className="relative pb-10 md:pb-20">
+            <Link to={"update"}>update</Link>
             <Header />
             <Blurblock top={"-20%"} left={"-20%"} rotate={"6.584deg"} />
           </section>

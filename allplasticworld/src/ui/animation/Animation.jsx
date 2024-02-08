@@ -6,6 +6,8 @@ import { motion } from "framer-motion";
 import styles from "./Animation.module.css";
 // import Progressbar from "../../components/progressbar/Progressbar";
 
+const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
 function Animation() {
   const [alltime, setAlltime] = useState([]);
 
@@ -29,12 +31,18 @@ function Animation() {
 
   return (
     <div className="relative h-44 md:h-60 lg:h-72 flex items-baseline gap-2">
-      <Plastiitems left={"36%"} top={"0%"} />
-      <Plastiitems left={"34%"} top={"5%"} />
-      <Plastiitems left={"38%"} top={"7%"} />
-      <Plastiitems left={"36%"} top={"7%"} />
-      <Plastiitems left={"33%"} top={"7%"} />
-      <Plastiitems left={"33%"} top={"0%"} />
+      <div className={styles.plastic_item_group}>
+        <div className={styles.plastic_item}></div>
+        <div className={styles.plastic_item}></div>
+        <div className={styles.plastic_item}></div>
+        <div className={styles.plastic_item}></div>
+        <div className={styles.plastic_item}></div>
+        <div className={styles.plastic_item}></div>
+        <div className={styles.plastic_item}></div>
+      </div>
+      {array.map((el, i) => (
+        <Plastiitems left={"30%"} top={"5%"} delay={i} />
+      ))}
       <Canvascomponent />
       <div className={styles.sorted_plate}>
         <div className={styles.sorted_div}></div>

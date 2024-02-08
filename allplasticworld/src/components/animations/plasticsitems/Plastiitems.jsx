@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import styles from "./Plastiitems.module.css";
 
-function Plastiitems({ top, right, bottom, left }) {
+function Plastiitems({ top, right, bottom, left, delay }) {
   return (
     <>
       <div
@@ -12,6 +12,7 @@ function Plastiitems({ top, right, bottom, left }) {
           left: `${left}`,
           bottom: `${bottom}`,
           right: `${right}`,
+          animationDelay:`${delay}s`,
         }}
       ></div>
     </>

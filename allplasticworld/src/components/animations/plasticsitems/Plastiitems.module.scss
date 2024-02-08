@@ -11,7 +11,7 @@
 
     25% {
         opacity: 1;
-        transform: translateY(112px) translateX(110px) rotate(160deg);
+        transform: translateY(112px) translateX(90px) rotate(160deg);
     }
     50% {
         opacity: 1;
@@ -23,6 +23,31 @@
     100% {
         opacity: 0;
         transform: translateY(165px) translateX(190px) rotate(380deg);
+    }
+}
+
+@media (max-width:393px){
+    @keyframes fadeout {
+        0% {
+            opacity: 1;
+            transform: translateY(0) translateX(20px) rotate(0deg);
+        }
+    
+        25% {
+            opacity: 1;
+            transform: translateY(112px) translateX(70px) rotate(160deg);
+        }
+        50% {
+            opacity: 1;
+            transform: translateY(112px) translateX(135px) rotate(380deg);
+        }
+        75% {
+            transform: translateY(165px) translateX(155px) rotate(380deg);
+        }
+        100% {
+            opacity: 0;
+            transform: translateY(165px) translateX(155px) rotate(380deg);
+        }
     }
 }
 

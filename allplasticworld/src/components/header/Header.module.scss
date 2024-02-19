@@ -1,15 +1,16 @@
 .nav_bar {
-    @apply flex items-center justify-between container;
+  @apply flex items-center justify-between container relative;
 }
 
 .btn_wrapper {
-    @apply flex items-center justify-center gap-2 md:gap-4;
+  @apply flex items-center justify-center gap-2 md:gap-4;
+  right: 15%;
 
-    .active_btn {
-        @apply bg-emerald-300 text-white;
-    }
+  .active_btn {
+    @apply bg-emerald-300 text-white;
+  }
 
-    button {
-        @apply bg-brightBlue w-8 h-8 md:w-16 rounded-lg md:rounded-full text-white text-sm;
-    }
+  button {
+    @apply bg-brightBlue w-8 h-8 md:w-16 rounded-lg md:rounded-full text-white text-sm;
+  }
 }

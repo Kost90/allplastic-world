@@ -1,9 +1,10 @@
 .nav_bar {
-  @apply flex items-center justify-between container;
+  @apply flex items-center justify-between container relative;
 }
 
 .btn_wrapper {
   @apply flex items-center justify-center gap-2 md:gap-4;
+  right: 15%;
 }
 .btn_wrapper .active_btn {
   @apply bg-emerald-300 text-white;

@@ -1,5 +1,5 @@
 .card_container {
-    @apply flex flex-col w-80 md:h-96 md:w-96 items-center justify-start gap-3 md:gap-6 bg-cardBg p-3 relative rounded-md max-h-96;
+    @apply flex flex-col w-80 md:h-96 md:w-96 items-center justify-center gap-3 md:gap-6 bg-cardBg p-3 relative rounded-md max-h-96;
     .div{
         @apply absolute inset-1/2 transform -translate-x-1/2 -translate-y-1/2 p-5 bg-brightBlue rounded-full flex items-center justify-center;
     }

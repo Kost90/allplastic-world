@@ -3,23 +3,29 @@ import { useSelector } from "react-redux";
 import Animation from "../animation/Animation";
 import { motion } from "framer-motion";
 
+const animation = {
+  hidden:{
+    opacity:0,
+    x:-50,
+  },
+  visible:{
+    opacity:1,
+    x:0,
+    transition: {
+      duration: 0.4,
+    },
+  }
+}
+
 function Mainsection() {
   const lang = useSelector((state) => state.languages);
   return (
     <div className="container">
       <motion.h1
-        initial={{
-          opacity: 0,
-          x: -50,
-        }}
-        whileInView={{
-          opacity: 1,
-          x: 0,
-          transition: {
-            duration: 0.3,
-          },
-          once: true,
-        }}
+        initial={"hidden"}
+        whileInView={"visible"}
+        viewport={{ amount: 0.2, once: true }}
+        variants={animation}
         className="md:max-w-screen-md max-w-80 leading-12"
       >
         {lang === "en"
@@ -27,16 +33,10 @@ function Mainsection() {
           : `Ласкаво просимо до всього пластикового світу`}
       </motion.h1>
       <motion.p
-        initial={{
-          opacity: 0,
-        }}
-        whileInView={{
-          opacity: 1,
-          transition: {
-            duration: 0.5,
-          },
-          once: true,
-        }}
+        initial={"hidden"}
+        whileInView={"visible"}
+        viewport={{ amount: 0.2, once: true }}
+        variants={animation}
         className="md:max-w-screen-md max-w-80 text-justify mb-7"
       >
         {lang === "en"

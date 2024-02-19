@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Card.module.css";
+import {motion} from 'framer-motion'
 import Svg from "../../assets/svg/Group 28.svg";
 
 // подумаю о анимации свг крутиться вокруг себя

@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./About.module.css";
+import {motion} from 'framer-motion'
 import Card from "../../components/card/Card";
 import { textEn, textUa } from "./text";
 import { useSelector } from "react-redux";

@@ -1,0 +1,7 @@
+.footer_wrapper{
+    @apply w-full h-72 rounded-tr-full rounded-tl-full border-t-2 border-t-sky-700 flex flex-col justify-between items-center pt-3;
+}
+
+.bottom_container{
+    @apply w-full h-8 bg-sky-700 text-center;
+}

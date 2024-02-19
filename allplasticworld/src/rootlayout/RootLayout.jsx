@@ -5,6 +5,7 @@ import Mainsection from "../ui/mainsection/Mainsection";
 import About from "../ui/about/About";
 import Howitworks from "../ui/howitworks/Howitworks";
 import Progressrecycle from "../ui/progressrecycle/Progressrecycle";
+import Footer from "../components/footer/Footer";
 
 function RootLayout() {
   return (
@@ -27,6 +28,7 @@ function RootLayout() {
       <section className="pb-10 md:pb-20">
         <Progressrecycle />
       </section>
+      <Footer/>
     </>
   );
 }
